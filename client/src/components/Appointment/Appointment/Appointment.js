@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../Shared/Navbar/Navbar';
+import AppointmentHeader from '../AppointmentHeader/AppointmentHeader';
 
 const Appointment = () => {
+    const [selectedDate, setSelectedDate] = useState();
+    const handleDateChange = date => {
+        setSelectedDate(date);
+    }
     return (
         <div>
             <Navbar />
-            <h1>Appointment</h1>
+            <AppointmentHeader handleDateChange={handleDateChange} />
         </div>
     );
 };
