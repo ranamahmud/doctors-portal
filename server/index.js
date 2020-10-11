@@ -28,10 +28,20 @@ client.connect(err => {
         const appointment = req.body;
         appointmentCollection.insertOne(appointment)
             .then(result => {
-                res.send(result.insertedCount)
+                res.send(result.insertedCount > 0)
             })
 
     })
+
+    app.post('/appointmentsByDate', (req, res) => {
+        const date = req.body;
+        appointmentCollection.find({ date: date.date })
+            .toArray((err, documents) => {
+                res.send(documents)
+            })
+    })
+
+
 });
 
 app.listen(port, () => {
