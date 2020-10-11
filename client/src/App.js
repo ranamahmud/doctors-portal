@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
 import Appointment from './components/Appointment/Appointment/Appointment';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 function App() {
   return (
     <Router>
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/appointment">
           <Appointment />
+        </Route>
+        <Route path="/dashboard/appointment">
+          <Dashboard />
         </Route>
       </Switch>
     </Router>
