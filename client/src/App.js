@@ -12,6 +12,7 @@ import {
 import Home from './components/Home/Home/Home';
 import Appointment from './components/Appointment/Appointment/Appointment';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import AddDoctor from './components/AddDoctor/AddDoctor/AddDoctor';
 function App() {
   return (
     <Router>
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/appointment">
           <Appointment />
+        </Route>
+        <Route path="/addDoctor">
+          <AddDoctor />
         </Route>
         <Route path="/dashboard/appointment">
           <Dashboard />
